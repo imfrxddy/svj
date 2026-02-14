@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffd6ec, #d7c7ff, #c9f1ff);
+  overflow: hidden;
+}
+
+/* Corazones fondo */
+.background-hearts::before {
+  content: "💗 💕 💞 💓 💖";
+  position: absolute;
+  font-size: 26px;
+  opacity: 0.3;
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
+
+.container {
+  text-align: center;
+}
+
+#envelope {
+  width: 140px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#envelope:hover {
+  transform: scale(1.1);
+}
+
+#letter {
+  display: none;
+  margin-top: 20px;
+  background: #fff0f7;
+  padding: 25px;
+  border-radius: 25px;
+  width: 280px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  animation: pop 0.5s ease;
+  position: relative;
+}
+
+#letter::after {
+  content: "💌";
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  font-size: 22px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  margin: 8px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.07);
+}
+
+.yes {
+  background: #ff9ecf;
+  color: white;
+}
+
+.no {
+  background: #c5c5ff;
+  color: white;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff0f7;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  animation: pop 0.4s ease;
+}
+
+.player {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.no-img {
+  width: 140px;
+  border-radius: 15px;
+}
+
+#modalNo .modal-content img {
+  width: 120px;
+  height: auto;
+  max-width: 60%;
+  display: block;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+
+.player {
+  width: 100%;
+  max-width: 220px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 12px;
+}
+
+#modalYes .modal-content img {
+  width: 120px;
+  height: auto;
+  max-width: 60%;
+  display: block;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+
+.player2 {
+  width: 100%;
+  max-width: 220px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 12px;
+}

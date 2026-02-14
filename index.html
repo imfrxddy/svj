@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+  <img id="envelope" src="https://images.zola.com/8a40e0ea-be2f-4e29-a8e2-6925c19f6f3f" alt="Carta">
+
+  <div id="letter">
+    <p>
+      Se que es un detalle pequeño,<br>
+      Pero lo que siento por ti no lo es...<br>
+      Gracias por hacer mis dias mas bonitos sin darte cuenta.<br>
+      Te amo mi amor, y por eso dejame preguntarte:<br><br>
+      ¿Te gustaría ser mi San Valentín?
+    </p>
+
+    <button class="yes" onclick="sayYes()">Sí 💗</button>
+    <button class="no" onclick="sayNo()">No >:v</button>
+  </div>
+</div>
+
+<!-- MODAL SÍ -->
+<div id="modalYes" class="modal">
+  <div class="modal-content">
+    <h2>Gracias bonita 💗</h2>
+    <p>Todos los dias son especiales cuando estoy contigo 💗.</p>
+    <img src="https://i.pinimg.com/originals/f8/be/cb/f8becb4e035e206d0dda352e1f9526df.gif">
+    <audio controls class="player">
+      <source src="The First Time.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+     <button onclick="closeYes()">Cerrar</button>
+  </div>
+</div>
+
+<!-- MODAL NO -->
+<div id="modalNo" class="modal">
+  <div class="modal-content">
+    <h2>Oye 🫵</h2>
+    <p>Vas a estar con el otro seguro</p>
+    <img src="https://i.pinimg.com/736x/46/c9/04/46c90412d6447030960467e68c5deb07.jpg" alt="Respuesta No" class="no-img">
+    <audio controls class="player2">
+        <source src="cuando-alguien-me-amaba.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    <button onclick="closeNo()">Cerrar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
